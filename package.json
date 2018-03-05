@@ -1,22 +1,26 @@
 {
-  "name": "Eloko",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
-  },
-  "dependencies": {
-    "react": "^16.3.0-alpha.1",
-    "react-native": "0.54.0"
-  },
-  "devDependencies": {
-    "babel-jest": "22.4.1",
-    "babel-preset-react-native": "4.0.0",
-    "jest": "22.4.2",
-    "react-test-renderer": "^16.3.0-alpha.1"
-  },
-  "jest": {
-    "preset": "react-native"
-  }
+    "name": "Eloko",
+    "version": "0.0.1",
+    "description": "Server Eloko created with node.js, express.js, mongodb, graphql",
+    "repository": "https://github.com/cp3junior/eloko-app-ios",
+    "author": "RAILALA <r3andrew@gmail.com>",
+    "license": "GPL-3.0",
+    "private": true,
+    "scripts": {
+        "start": "node node_modules/react-native/local-cli/cli.js start",
+        "test": "jest"
+    },
+    "dependencies": {
+        "react": "^16.3.0-alpha.1",
+        "react-native": "0.54.0"
+    },
+    "devDependencies": {
+        "babel-jest": "22.4.1",
+        "babel-preset-react-native": "4.0.0",
+        "jest": "22.4.2",
+        "react-test-renderer": "^16.3.0-alpha.1"
+    },
+    "jest": {
+        "preset": "react-native"
+    }
 }
