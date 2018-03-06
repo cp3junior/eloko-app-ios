@@ -8,17 +8,34 @@
     "private": true,
     "scripts": {
         "start": "node node_modules/react-native/local-cli/cli.js start",
-        "test": "jest"
+        "test": "jest",
+        "prettier": "prettier --single-quote true --tab-width 4 --print-width 80 --trailing-comma all --write '**/*.js'"
     },
     "dependencies": {
-        "react": "^16.3.0-alpha.1",
-        "react-native": "0.54.0"
+        "apollo-client": "1.9.0-0",
+        "lodash": "^4.17.5",
+        "moment": "^2.21.0",
+        "react": "16.3.0-alpha.1",
+        "react-apollo": "^1.4.8",
+        "react-native": "0.54.0",
+        "react-native-fit-image": "^1.5.4",
+        "react-native-vector-icons": "^4.5.0",
+        "react-navigation": "^1.0.0-beta.11",
+        "react-redux": "^5.0.5",
+        "redux": "^3.7.2",
+        "redux-thunk": "^2.2.0",
+        "styled-components": "^2.1.1"
     },
     "devDependencies": {
         "babel-jest": "22.4.1",
         "babel-preset-react-native": "4.0.0",
+        "eslint": "^4.18.2",
+        "eslint-config-equimper": "^2.2.2",
+        "eslint-config-prettier": "^2.9.0",
         "jest": "22.4.2",
-        "react-test-renderer": "^16.3.0-alpha.1"
+        "prettier": "^1.11.1",
+        "react-test-renderer": "^16.3.0-alpha.1",
+        "redux-devtools-extension": "^2.13.2"
     },
     "jest": {
         "preset": "react-native"
