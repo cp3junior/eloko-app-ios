@@ -4,7 +4,7 @@ import { TabNavigator, TabBarBottom, StackNavigator } from 'react-navigation';
 
 import { HomeScreen, MessageScreen, UserScreen, ContactScreen, TestScreen } from '../screens/';
 
-const Tabs =  TabNavigator(
+const Tabs = TabNavigator(
     {
         Home: {
             screen: HomeScreen,
