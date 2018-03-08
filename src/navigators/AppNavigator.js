@@ -1,13 +1,13 @@
 import React from 'react';
 import { Image } from 'react-native';
-import { TabNavigator, TabBarBottom } from 'react-navigation';
+import { TabNavigator, TabBarBottom, StackNavigator } from 'react-navigation';
 
-import { HomeTab, MessageTab, UserTab, ContactTab } from '../tabs/';
+import { HomeScreen, MessageScreen, UserScreen, ContactScreen, TestScreen } from '../screens/';
 
-export default TabNavigator(
+const Tabs =  TabNavigator(
     {
         Home: {
-            screen: HomeTab,
+            screen: HomeScreen,
             navigationOptions: {
                 tabBarIcon: ({ focused }) => (
                     <Image
@@ -18,7 +18,7 @@ export default TabNavigator(
             },
         },
         Message: {
-            screen: MessageTab,
+            screen: MessageScreen,
             navigationOptions: {
                 tabBarIcon: ({ focused }) => (
                     <Image
@@ -29,7 +29,7 @@ export default TabNavigator(
             },
         },
         Contact: {
-            screen: ContactTab,
+            screen: ContactScreen,
             navigationOptions: {
                 tabBarIcon: ({ focused }) => (
                     <Image
@@ -40,7 +40,7 @@ export default TabNavigator(
             },
         },
         User: {
-            screen: UserTab,
+            screen: UserScreen,
             navigationOptions: {
                 tabBarIcon: ({ focused }) => (
                     <Image
@@ -66,5 +66,31 @@ export default TabNavigator(
                 paddingVertical: 5,
             },
         },
+    },
+);
+
+export default StackNavigator(
+    {
+        Main: {
+            screen: Tabs,
+        },
+        Inner: {
+            screen: TestScreen,
+        },
+    },
+    {
+        cardStyle: {
+            backgroundColor: '#F1F6FA',
+        },
+        navigationOptions: () => ({
+            headerStyle: {
+                backgroundColor: '#fff',
+            },
+            headerTitleStyle: {
+                fontWeight: 'bold',
+                color: '#000',
+                fontSize: 23,
+            },
+        }),
     },
 );
