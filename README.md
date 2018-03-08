@@ -1,2 +1,2 @@
-# eloko-app-ios
-Eloko iOS app created with React Native
+# eloko-bootstrap
+Bootstrap react native app for redux, apollo 2.x, react-navigation nested tab
