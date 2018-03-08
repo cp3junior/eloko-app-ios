@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 
-export default client =>
-    combineReducers({
-        apollo: client.reducer(),
-    });
+import navigationReducer from '../reducers/navigationReducer';
+
+export default combineReducers({
+    nav: navigationReducer,
+});

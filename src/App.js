@@ -1,27 +1,25 @@
-'use strict';
-import React, { Component } from 'react';
-import { AppRegistry, UIManager } from 'react-native';
+import React from 'react';
+import { UIManager } from 'react-native';
+import { Provider } from 'react-redux';
 import { ApolloProvider } from 'react-apollo';
-import { ThemeProvider } from 'styled-components';
 
-import { store, client } from './store';
-import { colors } from './utils/constants';
-import Welcome from './components/Welcome';
+import AppWithNavigationState from './navigators/navigation';
+import { client, store } from './utils/store';
 
 if (UIManager.setLayoutAnimationEnabledExperimental) {
     UIManager.setLayoutAnimationEnabledExperimental(true);
 }
 
-export default class App extends Component {
+class Root extends React.Component {
     render() {
         return (
-            <ApolloProvider store={store} client={client}>
-                <ThemeProvider theme={colors}>
-                    <Welcome />
-                </ThemeProvider>
-            </ApolloProvider>
+            <Provider store={store}>
+                <ApolloProvider client={client}>
+                    <AppWithNavigationState {...this.props} />
+                </ApolloProvider>
+            </Provider>
         );
     }
 }
 
-AppRegistry.registerComponent('Eloko', () => App);
+export default Root;
