@@ -2,7 +2,7 @@ import React from 'react';
 import { Image } from 'react-native';
 import { TabNavigator, TabBarBottom, StackNavigator } from 'react-navigation';
 
-import { HomeScreen, MessageScreen, UserScreen, ContactScreen, TestScreen } from '../screens/';
+import { HomeScreen, MessageScreen, UserScreen, ContactScreen } from '../screens/';
 
 const Tabs = TabNavigator(
     {
@@ -73,9 +73,6 @@ export default StackNavigator(
     {
         Main: {
             screen: Tabs,
-        },
-        Inner: {
-            screen: TestScreen,
         },
     },
     {
